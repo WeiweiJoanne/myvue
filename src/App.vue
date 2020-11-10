@@ -8,7 +8,8 @@
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <router-view></router-view>
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
 </div>
 </template>
 
@@ -20,6 +21,7 @@ export default {
   components: {
     HelloWorld,
   },
+  router,
   created() {
     this.$http.get('https://randomuser.me/api/')
       .then((response) => {
